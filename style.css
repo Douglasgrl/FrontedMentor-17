@@ -1,0 +1,245 @@
+:root{
+    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayis-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --white: #fff;
+}
+
+body{
+    padding: 6rem 0;
+    min-height: 70vh;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    width: 90%; 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container-one{
+    width: 100%;
+    height: 200px;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    border-top-right-radius: 6rem;
+    margin: auto;
+}
+
+.container-logo{
+    padding: 0 3rem;
+}
+
+.container-icons{
+    padding: 0 3rem;
+    display: flex;
+    gap: .8rem;
+}
+
+.icon-one{
+    background-color: var(--very-dark-blue);
+    padding: .7rem;
+    border-radius: .5em;
+}
+
+.icon-two{
+    background-color: var(--very-dark-blue);
+    padding: .7rem;
+    border-radius: .5em;
+}
+
+.icon-three{
+    background-color: var(--very-dark-blue);
+    padding: .7rem;
+    border-radius: .5em;
+}
+
+.container-two{
+    background-color: var(--dark-blue);
+    width: 100%;
+    margin: auto;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+}
+
+.container-two__title{
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--pale-blue);
+    padding: 0 1.5rem;
+    padding-top: 1rem;
+}
+
+.span{
+    color: var(--white);
+    font-weight: 700;
+}
+
+.container-line{
+    background-color: var(--very-dark-blue);
+    width: 80%;
+    height: 1.1rem;
+    border-radius: 2rem;
+    position: relative;
+    padding-bottom: 1.3rem;
+}
+
+.container-linear__one{
+    width: 80%;
+    background: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 1rem;
+    position: absolute;
+    border-radius: 1rem;
+    top: 2px;
+    left: 3px;
+}
+
+.container__linear--two{
+    width: .8rem;
+    height: .8rem;
+    background-color: var(--pale-blue);
+    position: relative;
+    border-radius: 50%;
+    top: 1.7px;
+    left: 12.6rem;
+}
+
+.container-paragraph{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    color: var(--pale-blue);
+    font-size: 700;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    width: 55%;
+    height: 55%;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+.final-paragraph{
+    font-size: 2.8rem;
+}
+
+.span-final{
+    font-size: 1.1rem;
+    color: var(--grayis-blue);
+}
+
+@media screen and (min-width:380px) {
+    body{
+        background-image: url(images/bg-desktop.png);
+        min-height: 90vh;
+        display: flex;
+        padding: 1.9rem;
+        background-position: bottom right;
+        background-size: 100% 55%; 
+        background-color: var(--very-dark-blue);
+    }
+
+    .container{
+        max-width: 295px;
+    }
+
+    .container__linear--two{
+        left: 10.8rem;
+    }
+}
+
+@media screen and (min-width: 820px){
+    .container{
+        flex-direction: row;
+        max-width: 700px;
+    }
+
+    .container-one{
+        width: 40%;
+        margin-bottom: 3rem;
+    }
+
+    .container__linear--two{
+        left: 16rem;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+
+    body{
+        background-image: url(images/bg-desktop.png);
+        min-height: 90vh;
+        display: flex;
+        padding: 1.9rem;
+        background-position: bottom right;
+        background-size: 100% 55%; 
+    }
+
+    .container{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 8rem;
+        gap: 2rem;
+        max-width: 1050px;
+        min-width: 1050px;
+    }
+
+    .container-one{
+        width: 30%;
+        margin-bottom: 3rem;
+        margin-left: 5rem;
+    }
+
+    .container-two{
+        width: 55%;
+        margin-right: 4rem;
+    }
+
+    .container__linear--two{
+        left: 21.7rem;
+    }
+
+    .final{
+        position: relative;
+        bottom: 12rem;
+        left: 10rem;
+        width: 30%;
+        border-radius: 10px;
+        padding: 0 .5rem;
+    }
+
+    .final::before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        border-left: 20px solid transparent;
+        border-top: 20px solid transparent;
+        border-right: 20px solid var(--white);
+        border-bottom: 20px solid transparent;
+        top: 2.8rem;
+        left: 8.15rem;
+        z-index: 1;
+    }
+}
